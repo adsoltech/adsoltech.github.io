@@ -1,7 +1,7 @@
 :root{
-    --primary: rgb(0, 24, 48);
-    --secondary: rgb(48, 168, 144);
-    --tertiary: rgb(240, 120, 24);
+    --primary: rgb(24, 38, 52);
+    --secondary: rgb(51, 177, 143);
+    --tertiary: rgb(241, 125, 29);
 }
 
 .app-background-is-primary{
