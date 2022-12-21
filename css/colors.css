@@ -4,17 +4,17 @@
     --tertiary: rgb(241, 125, 29);
 }
 
-.app-background-is-primary{
+.is-primary-app{
     background-color: var(--primary);
     color: white;
 }
 
-.app-background-is-secondary{
+.is-secondary-app{
     background-color: var(--secondary);
     color: white;
 }
 
-.app-background-is-tertiary{
+.is-tertiary-app{
     background-color: var(--tertiary);
     color: white;
 }
