@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Fredoka");
 
-body {
-    font-family: Montserrat;
+.has-text-title-app {
+    font-family: 'Fredoka', sans-serif;
 }
 
-.is-font-fredoka{
-    font-family: Fredoka;
+.body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.is-unbreakable {
+    white-space: nowrap;
 }
 
 .has-shade {

@@ -18,3 +18,15 @@
     background-color: var(--tertiary);
     color: white;
 }
+
+.has-text-primary-app{
+    color: var(--primary);
+}
+
+.has-text-secondary-app{
+    color: var(--secondary);
+}
+
+.has-text-tertiary-app{
+    color: var(--tertiary);
+}
