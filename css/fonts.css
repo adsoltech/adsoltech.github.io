@@ -25,7 +25,7 @@
 }
 
 .is-unbreakable {
-    white-space: nowrap;
+    word-break: keep-all;
 }
 
 .has-shade {
