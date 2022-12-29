@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://fonts.googleapis.com/css?family=Fredoka");
 
-.has-text-title-app {
-    font-family: 'Fredoka', sans-serif;
+@font-face {
+    font-family: SpaceColony;
+    src: url("../fonts/SpaceColony-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SpaceColony;
+    src: url("../fonts/SpaceColony-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+.has-text-logo-bold-app {
+    font-family: 'SpaceColony';
+    font-weight: bold;
+}
+
+.has-text-logo-app {
+    font-family: 'SpaceColony';
 }
 
 .body {
