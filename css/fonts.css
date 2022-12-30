@@ -24,8 +24,17 @@
     font-family: 'Montserrat', sans-serif !important;
 }
 
+.is-word-unbreakable {
+    word-break: keep-all;
+}
+
+.is-space-unbreakable {
+    white-space: nowrap;
+}
+
 .is-unbreakable {
     word-break: keep-all;
+    white-space: nowrap;
 }
 
 .has-shade {
