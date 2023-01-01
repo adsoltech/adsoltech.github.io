@@ -10,8 +10,10 @@
   <link rel="stylesheet" type="text/css" href="./css/fonts.css">
   <link rel="stylesheet" type="text/css" href="./css/img.css">
   <script src="https://kit.fontawesome.com/76f9b8ee34.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <style>
-    html, body {
+    html,
+    body {
       width: 100%;
       height: 100%;
       margin: 0px;
@@ -48,10 +50,22 @@
     .box {
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
+
+    .reveal {
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: 1s all ease;
+    }
+
+    .reveal.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
   </style>
 </head>
 
-<body>
+<body onscroll="log">
   <!-- Begin Header -->
   <section id="tagline" class="hero">
     <div class="hero-body">
@@ -83,7 +97,7 @@
         <h2 class="is-size-2 has-text-centered mb-4">About</h2>
         <div class="columns is-multiline">
           <div class="column is-half">
-            <div class="box">
+            <div class="box reveal">
               <p class="title">
                 Vision
                 <span class="icon has-text-primary-app ml-2">
@@ -95,7 +109,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="box">
+            <div class="box reveal">
               <p class="title">
                 Mision
                 <span class="icon has-text-primary-app ml-2">
@@ -107,7 +121,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="box">
+            <div class="box reveal">
               <p class="title">
                 Cause
                 <span class="icon has-text-primary-app ml-2">
@@ -135,7 +149,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="box">
+            <div class="box reveal">
               <p class="title">
                 Values
                 <span class="icon has-text-primary-app ml-3">
@@ -187,7 +201,7 @@
         <h2 class="is-size-2 has-text-centered mb-4">Team</h2>
         <div class="columns is-centered is-multiline has-text-centered">
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -210,7 +224,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -234,7 +248,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -256,7 +270,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -278,7 +292,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -302,7 +316,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -325,7 +339,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -347,7 +361,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -371,7 +385,7 @@
             </div>
           </div>
           <div class="column is-half-tablet is-one-third-desktop">
-            <div class="box">
+            <div class="box reveal">
               <div class="block m-4">
                 <div class="columns is-centered is-mobile">
                   <div class="column is-12">
@@ -431,4 +445,21 @@
     </div>
   </div>
   <!-- End Footer -->
+  <script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    reveal();
+    $('body').on('scroll', reveal);
+  </script>
 </body>
